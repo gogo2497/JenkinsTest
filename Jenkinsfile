@@ -17,7 +17,7 @@ pipeline {
                 script {
                     deleteDir()
                     Checkout checkout = new Checkout()
-                    checkout.fromGit(env, 'https://github.com/gogo2497/JenkinsTest.git', 'test')
+                    checkout.fromGitRecursive(env, 'https://github.com/gogo2497/JenkinsTest.git', 'test', 'main', false)
                 }
             }
         }
