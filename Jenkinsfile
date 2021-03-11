@@ -24,7 +24,7 @@ pipeline {
         stage('Stage 3') {
             steps {
                 script {
-                    python JenkinsTest/Test.py
+                    python Test.py
                 }
             }
         }
