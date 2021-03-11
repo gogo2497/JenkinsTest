@@ -24,8 +24,7 @@ pipeline {
         stage('Stage 3') {
             steps {
                 script {
-                    /bin/sh
-                    python Test.py
+                    sh Test.py
                 }
             }
         }
