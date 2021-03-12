@@ -7,12 +7,12 @@ pipeline {
     }
 
     stages {
-        stage('Stage 1') {
+        stage('Entry') {
             steps {
                 echo 'hello'
             }
         }
-        stage('Stage 2') {
+        stage('Checkout') {
             steps {
                 script {
                     deleteDir()
@@ -21,7 +21,7 @@ pipeline {
                 }
             }
         }
-        stage('Stage 3') {
+        stage('Run') {
             steps {
                 script {
                     sh 'python test/Test.py'
