@@ -6,7 +6,7 @@ WORKDIR /JenkinsTest
 RUN pip install --upgrade pip
 RUN pip install pylint --upgrade
 COPY . .
-RUN pylint.sh
+RUN JenkinsTest/pylint.sh
 
 # CMD pylint /JenkinsTest/test.py
 
