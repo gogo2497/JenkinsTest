@@ -1,4 +1,4 @@
-FROM centos:7.6.1810
+FROM python:3.7.2-stretch
 WORKDIR /JenkinsTest
 # RUN apk-get update \
 #     && apk-get install -y --no-install-recommends gcc and-build-dependencies
