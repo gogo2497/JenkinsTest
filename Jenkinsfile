@@ -24,7 +24,8 @@ pipeline {
         stage('Run') {
             steps {
                 script {
-                    sh 'python test/Test.py'
+                    sh 'docker build -t first .'
+                    sh 'docker run first'
                 }
             }
         }
