@@ -1,12 +1,8 @@
-FROM python:3.7.2-alpine3.8
+FROM python:3.7.2-alpine
 WORKDIR /JenkinsTest
 # RUN apk-get update \
 #     && apk-get install -y --no-install-recommends gcc and-build-dependencies
-ENV PYLINT_VERSION=1.7.2
 
-RUN apk add --no-cache --virtual .run-deps git \
- && pip install pylint==$PYLINT_VERSION \
- && mkdir -p /code
 RUN pip install --upgrade pip
 RUN pip install pylint --upgrade
 COPY . .
