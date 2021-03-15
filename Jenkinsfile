@@ -24,9 +24,13 @@ pipeline {
         stage('Run') {
             steps {
                 script {
+                    dir('test') {
+                        sh 'pwd'
+
 //                     sh 'python test/Test.py'
-                    sh 'docker build -t first .'
-                    sh 'docker run first'
+                        sh 'docker build -t first .'
+                        sh 'docker run first'
+                    }
                 }
             }
         }
