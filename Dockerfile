@@ -9,6 +9,7 @@ RUN apt-get update && \
       apt-get -y install sudo
 RUN apt-get install sudo
 COPY . .
+RUN sudo chmod +x pylint.sh
 RUN sudo ./pylint.sh
 
 # CMD pylint /JenkinsTest/test.py
