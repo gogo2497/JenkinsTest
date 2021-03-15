@@ -1,8 +1,8 @@
-FROM python:3.6.13-alpine3.12
+FROM python:3.7.2-alpine3.8
 WORKDIR /JenkinsTest
-# RUN pip install pylint
-# RUN pip install pylint --upgrade
+RUN pip install --upgrade pip
+RUN pip install pylint --upgrade
 COPY . .
-ENTRYPOINT python /JenkinsTest/test.py
-CMD pylint /JenkinsTest/test.py
+ENTRYPOINT pylint /JenkinsTest/test.py
+# CMD pylint /JenkinsTest/test.py
 
