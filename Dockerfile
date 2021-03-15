@@ -6,6 +6,7 @@ WORKDIR /JenkinsTest
 RUN pip install --upgrade pip
 RUN pip install pylint --upgrade
 COPY . .
-ENTRYPOINT pylint /JenkinsTest/test.py
+RUN pylint /JenkinsTest/test.py
+
 # CMD pylint /JenkinsTest/test.py
 
