@@ -4,8 +4,8 @@
 
 out=$(pylint /JenkinsTest/test.py)
 echo $out
-NUMBER=echo "${out}"//[^0-9]/
-echo $NUMBER
+echo "${out}//[^0-9]/)"
+#echo $NUMBER
 #if[[$out =~ \d+ ]]; then
 #    echo "$out contains a digit"
 #else
