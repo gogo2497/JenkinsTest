@@ -9,8 +9,8 @@ echo $NUMBER
 extractedNum=$(($NUMBER/100))
 echo $extractedNum
 
-if [extractedNum < 1000]
-then 
+if [$extractedNum < 1000]
+then
     echo "does not pass"
     exit 1
 else
