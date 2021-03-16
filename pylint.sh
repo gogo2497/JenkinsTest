@@ -6,8 +6,8 @@ out=$(pylint /JenkinsTest/test.py)
 echo $out
 NUMBER=$(echo $out | tr -dc '0-9')
 echo $NUMBER
-extract="${NUMBER:0:1}"
-echo $extract
+NUMBER = NUMBER / 100
+echo $NUMBER
 #if[[$out =~ \d+ ]]; then
 #    echo "$out contains a digit"
 #else
