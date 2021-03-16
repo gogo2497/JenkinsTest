@@ -4,7 +4,7 @@
 
 out=$(pylint /JenkinsTest/test.py)
 echo $out
-outReg=$(expr match "$string" '2013:06:23 \([0-9]\+\)')
-echo $outReg
+if [[ $out =~ [0-9]]; then
+    echo "$out contains a digit"
 #result=$(grub-md5-crypt 2>&1 | grep xy)
 #echo $result > output
