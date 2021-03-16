@@ -1,6 +1,6 @@
 
 
-#!/bin/sh
+#!/bin/bash
 
 out=$(pylint /JenkinsTest/test.py)
 echo $out
