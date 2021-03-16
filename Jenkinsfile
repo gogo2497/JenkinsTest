@@ -29,6 +29,7 @@ pipeline {
 
 //                     sh 'python test/Test.py'
                         sh 'docker build -t first .'
+                        sh 'docker ps'
 //                         sh 'docker run first'
                     }
                 }
