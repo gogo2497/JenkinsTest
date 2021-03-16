@@ -25,11 +25,10 @@ pipeline {
             steps {
                 script {
                     dir('test') {
-                        sh 'pwd'
+//                         sh 'pwd'
 
 //                     sh 'python test/Test.py'
                         sh 'docker build -t first .'
-                        sh 'docker ps'
 //                         sh 'docker run first'
                     }
                 }
