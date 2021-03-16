@@ -4,7 +4,9 @@
 
 out=$(pylint /JenkinsTest/test.py)
 echo $out
-if[[$out =~ [0-9] ]]; then
+value=$(echo "i am 99" | tr -dc '0-9')
+echo $value
+if[[$out =~ \d+ ]]; then
     echo "$out contains a digit"
 else
     echo "no"
