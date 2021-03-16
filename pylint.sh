@@ -1,12 +1,11 @@
 
 
-#!/bin/bash
+#!/bin/sh
 
 out=$(pylint /JenkinsTest/test.py)
-#echo $out
-#echo "${out//[^0-9]/}"
-tail -c 10 $out
-#echo $NUMBER
+echo $out
+NUMBER=$(echo $out | tr -dc '0-9')
+echo $NUMBER
 #if[[$out =~ \d+ ]]; then
 #    echo "$out contains a digit"
 #else
